@@ -1,0 +1,83 @@
+.claimList {
+    width: 100%;
+    min-height: 100vh;
+    padding: 70px 0;
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        .claimListBox {
+            padding: 30px 30px 70px;
+            @media (max-width: 991px) {
+                width: 100%;
+            }
+            @media (min-width: 992px) and (max-width: 1399px) {
+                width: unset;
+            }
+            margin: 75px auto 0 auto;
+            border-radius: 4px;
+            // h1 {
+            //     font-size: 34px;
+            //     font-weight: 600;
+            //     color: rgba(0, 0, 0, 0.85);
+            //     text-align: center;
+            //     font-family: "Segoe_UI";
+            // }
+        }
+    }
+}
+.nameColImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px 0;
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+.nameColText {
+    margin-left: 8px;
+    p {
+        margin: 0;
+        &:first-child {
+            font-size: 16px;
+            font-weight: 900;
+            color: #222;
+            font-family: "Segoe_UI";
+        }
+        &:nth-child(2) {
+            font-size: 12px;
+            font-weight: 900;
+            font-family: "Segoe_UI";
+        }
+    }
+}
+.TokenColText {
+    p {
+        margin: 0;
+        &:first-child {
+            font-size: 16px;
+            font-weight: 900;
+            color: #222;
+            font-family: "Segoe_UI";
+        }
+        &:nth-child(2) {
+            font-size: 12px;
+            font-weight: 900;
+            font-family: "Segoe_UI";
+        }
+    }
+}
+.ActionCol {
+    button {
+        background-color: #f95192;
+        border-radius: 4px;
+        color: #fff;
+        border: none;
+        padding: 3px 10px;
+        cursor: pointer;
+    }
+}

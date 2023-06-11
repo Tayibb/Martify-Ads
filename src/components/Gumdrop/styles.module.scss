@@ -1,0 +1,170 @@
+.airdrop {
+  width: 100%;
+  min-height: 100vh;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    h1 {
+      font-size: 36px;
+      margin-top: 140px;
+      @media (max-width: 767px) {
+        font-size: 32px;
+      }
+      @media (max-width: 575px) {
+        font-size: 26px;
+      }
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-family: "Segoe_UI";
+    }
+    .airdropFormBox {
+      padding: 40px 20px;
+      margin: 40px auto 0 auto;
+      border-radius: 4px;
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .formStyle {
+          margin-top: 15px;
+          padding: 0 9px 0 6px;
+          label {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.85);
+            text-align: center;
+            font-family: "Segoe_UI";
+            span {
+              color: #f14668 !important;
+            }
+          }
+          input {
+            width: 99%;
+            height: 26px;
+            border: 1px solid #d9d9d9;
+            outline: none;
+            padding: 5px 0 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: "Segoe_UI";
+            &:hover {
+              border-color: #f95192 !important;
+            }
+            &:focus-within {
+              border-color: #f95192 !important;
+              box-shadow: 0 0 0 0.125em rgba(249, 81, 146, 0.25) !important;
+            }
+            margin-top: 5px;
+          }
+          input::placeholder {
+            font-size: 14px;
+            color: #d9d9d9;
+          }
+          input[type="number"]::-webkit-outer-spin-button,
+          input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          input[type="number"] {
+            -moz-appearance: textfield;
+          }
+          textarea {
+            width: 99%;
+            height: 100px;
+            border: 1px solid #d9d9d9;
+            outline: none;
+            padding: 5px 0 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: "Segoe_UI";
+            &:hover {
+              border-color: #f95192 !important;
+            }
+            &:focus-within {
+              border-color: #f95192 !important;
+              box-shadow: 0 0 0 0.125em rgba(249, 81, 146, 0.25) !important;
+            }
+            margin-top: 5px;
+          }
+          textarea::placeholder {
+            font-size: 16px;
+            color: #d9d9d9;
+            width: 85%;
+          }
+          .errorBorder {
+            border-color: #f14668 !important;
+          }
+        }
+        .selector {
+          margin: 5px;
+          label {
+            
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.85);
+            text-align: center;
+            font-family: "Segoe_UI";
+            span {
+              color: #f14668 !important;
+            }
+            
+          }
+          input {
+            &:focus-within {
+              border-color: none;
+              box-shadow: none;
+            }
+          }
+        }
+        .formErrors {
+          font-size: 12px;
+          margin: 5px 0 0 0;
+          text-align: left !important;
+          color: #f14668 !important;
+          font-family: "Segoe_UI";
+        }
+        button {
+          width: 115px;
+          // @media (max-width: 767px) {
+          //     width: 432px;
+          // }
+          // @media (max-width: 575px) {
+          //     width: 298px;
+          // }
+          height: 34px;
+          margin-top: 30px;
+          color: #fff;
+          font-weight: 900;
+          font-family: "Segoe_UI";
+          border: 1px solid #f95192;
+          background-color: #f95192;
+          cursor: pointer;
+          border-radius: 4px;
+          font-size: 14px;
+        }
+        .statusMsg {
+          font-weight: 600;
+          font-family: "Segoe_UI";
+          color: #f95192 !important;
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .disclaimer {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.85);
+    font-family: "Segoe_UI";
+    text-align: center;
+    max-width: 80%;
+    @media (max-width: 767px) {
+      max-width: 90%;
+      font-size: 14px;
+    }
+    @media (max-width: 575px) {
+      max-width: 95%;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.header {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1201;
+    width: 100%;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    h1 {
+        color: rgba(0, 0, 0, 0.85);
+        font-size: 16px;
+        font-family: "Segoe_UI";
+        font-weight: 600;
+        margin-left: 8px;
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
+    h2 {
+        color: #222;
+        font-size: 14px;
+        font-family: "Segoe_UI";
+        font-weight: 900;
+        margin-left: 5px;
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
+    .headerBtn {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 30px;
+        padding: 4px 10px;
+        height: 35px;
+        margin-right: 10px;
+    }
+}

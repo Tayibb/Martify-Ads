@@ -1,0 +1,697 @@
+@font-face {
+    font-family: "Segoe_UI";
+    src: url("../src/assets/fonts/Segoe_UI.ttf");
+}
+body.light-mode {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+body.dark-mode {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #242525;
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(249, 81, 146) !important;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: rgb(249, 81, 146) 0px 0px 2px inset;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+        background-color: #242525 !important;
+        border: 0.5px solid #f95192;
+        border-top: none;
+        border-bottom: none;
+    }
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #dadada;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: rgb(249, 81, 146) 0px 0px 2px inset;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+    border: 0.5px solid #dadada;
+    border-top: none;
+    border-bottom: none;
+}
+::selection {
+    background-color: #f95192;
+    color: #fff !important;
+}
+/* For Firefox */
+::-moz-selection {
+    background-color: #f95192;
+    color: #fff !important;
+}
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+    width: 240px;
+    margin-top: 75px;
+}
+.disableBtn {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    color: rgba(0, 0, 0, 0.3) !important;
+    cursor: not-allowed !important;
+}
+
+.collapseSidebar {
+    .tooltipBox {
+        width: 160px;
+        height: 87px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+        position: fixed;
+        margin-top: 180px;
+        top: 0;
+        margin-left: 66px;
+        padding: 8px 0;
+        display: none;
+        a {
+            .sidebarActiveBg {
+                .tooltipText {
+                    font-size: 15px;
+                    color: #222;
+                    font-family: "Segoe_UI";
+                    margin: 0;
+                    padding: 12px 0 12px 25px;
+                    &:hover {
+                        color: #f95192;
+                    }
+                }
+            }
+        }
+        a[class="active"] {
+            .tooltipText {
+                color: #f95192;
+            }
+        }
+    }
+    .launchHover:hover .tooltipBox {
+        display: block;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+.dropdown-icon {
+    transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.dropdown-icon.active {
+    transform: rotate(180deg);
+    animation-name: rotateIcon;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-fill-mode: forwards;
+}
+
+.launchpad-dropdown.active .dropdown-text {
+    opacity: 0;
+}
+
+.subOptionSidebar,
+.tooltipText {
+    animation-name: slideDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.MuiTooltip-tooltip {
+    cursor: pointer !important;
+    margin-left: 8px !important;
+    background-color: #fff !important;
+    padding: 6px 10px !important;
+    a {
+        color: #f95192 !important;
+        text-decoration: none !important;
+    }
+    font-size: 12px !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+    .css-kudwh-MuiTooltip-arrow::before {
+        background-color: #fff !important;
+    }
+}
+.css-fpdx5i-MuiDrawer-docked .MuiDrawer-paper {
+    width: 65px !important;
+    top: 75px !important;
+    height: 81%;
+}
+.css-cs0a20-MuiDrawer-docked .MuiDrawer-paper {
+    width: 200px !important;
+    top: 75px !important;
+    height: 81%;
+}
+@keyframes slideIn {
+    from {
+        height: 0;
+    }
+    to {
+        height: 95px;
+    }
+}
+
+.launchpad-dropdown {
+    background-color: #faf9fa;
+    animation-duration: 0.5s;
+    animation-name: slideIn;
+}
+
+a {
+    &:hover {
+        span {
+            color: #f95192 !important;
+            svg {
+                color: #f95192 !important;
+                fill: #f95192 !important;
+            }
+        }
+    }
+    .subOptionSidebar {
+        font-size: 15px;
+        color: #222;
+        font-family: "Segoe_UI";
+        margin: 0;
+        padding-top: 15px;
+        padding: 14px 0 14px 50px;
+        &:hover {
+            color: #f95192 !important;
+        }
+    }
+}
+a[class="active"] {
+    .sidebarActiveBg {
+        background-color: #fff0f3;
+        span {
+            color: #f95192 !important;
+            svg {
+                color: #f95192 !important;
+                fill: #f95192 !important;
+            }
+        }
+    }
+    .subOptionSidebar {
+        color: #f95192;
+    }
+}
+
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+    border-right: none !important;
+}
+.react-datepicker__navigation {
+    width: 32px !important;
+    height: 32px !important;
+    margin-top: 0 !important;
+    color: #fff;
+    font-weight: 900;
+    font-family: "Segoe_UI";
+    border: none !important;
+    background-color: transparent !important;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.headerBtn {
+    background-color: #f3f3f4;
+    color: #222 !important;
+    border-radius: 30px !important;
+    cursor: pointer;
+    font-size: 14px !important;
+    font-family: "Segoe_UI";
+    font-weight: 500 !important;
+    border: none;
+    &:first-child {
+        margin-right: 5px;
+    }
+    &:hover {
+        background-color: #f3f3f4;
+    }
+}
+.modalInput {
+    &:hover {
+        border: 1px solid #f95997 !important;
+    }
+    &:focus-within {
+        border: 1px solid #f95997 !important;
+    }
+}
+.wallet-adapter-button {
+    padding: 0 12px !important;
+    height: 42px !important;
+    i {
+        margin-right: 6px;
+    }
+}
+.wallet-adapter-modal-wrapper {
+    background-color: #fff !important;
+    .wallet-adapter-modal-title {
+        color: #222 !important;
+    }
+    .wallet-adapter-button {
+        color: #222 !important;
+    }
+    .wallet-adapter-modal-list-more {
+        color: #222 !important;
+        svg {
+            fill: #222 !important;
+        }
+    }
+    .wallet-adapter-button:not([disabled]):hover {
+        background-color: #e84d89 !important;
+        color: #fff !important;
+    }
+    .wallet-adapter-modal-button-close {
+        background-color: #fdeaf1 !important;
+        svg {
+            fill: #e84d89 !important;
+        }
+    }
+}
+.wallet-adapter-dropdown-list {
+    background-color: #f3f3f4 !important;
+    li {
+        color: #222 !important;
+        &:hover {
+            background-color: rgb(224, 224, 228) !important;
+        }
+    }
+}
+.css-1fdsijx-ValueContainer {
+    width: 536px;
+    font-size: 14px;
+    padding: 1px 8px !important;
+    height: 40px;
+    margin-top: -2px;
+    @media (max-width: 767px) {
+        width: 355px;
+    }
+    @media (max-width: 575px) {
+        width: 220px;
+    }
+    padding: 1px 8px !important;
+}
+.tokenFileChosen {
+    input[type="file"] {
+        padding: 0 0 13px 0 !important;
+    }
+    ::-webkit-file-upload-button {
+        background-color: #fff0f3 !important;
+        color: #f95997;
+        padding: 13px 20px;
+        border: none;
+        cursor: pointer;
+        height: 42px;
+        margin-right: 10px;
+        padding: 0 16px;
+        border: none;
+    }
+}
+.customSelector {
+    .css-1fdsijx-ValueContainer {
+        width: 575px;
+        font-size: 14px;
+        padding: 1px 8px !important;
+        height: 40px;
+        margin-top: -2px;
+        @media (max-width: 767px) {
+            width: 395px;
+        }
+        @media (max-width: 575px) {
+            width: 256px;
+        }
+        padding: 1px 8px !important;
+    }
+}
+@media (min-width: 992px) {
+    .pushSideBar {
+        min-height: 100vh;
+        margin-left: 200px;
+        transition: 0.4s;
+    }
+    html,
+    body.pushSideBar {
+        overflow-y: auto;
+    }
+    .notPushSideBar {
+        margin-left: 65px;
+        transition: 0.2s;
+    }
+}
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+        color: #e84d89 !important;
+    }
+}
+.css-j5w0w9-MuiStepConnector-root {
+    width: 10%;
+}
+// Mui Table Styling - responsive / alignment / width // start
+// .column-cell-name,
+// .column-header-name,
+// .column-header-token,
+// .column-cell-token {
+//     max-width: 350px !important;
+// }
+
+.column-header-name,
+.column-cell-name,
+.column-header-token,
+.column-cell-token {
+    &:first-child {
+        padding-left: 30px !important;
+    }
+}
+// .css-1kwdphh-MuiDataGrid-virtualScrollerContent {
+//     // must give the this class to width: 100%
+//     width: 100% !important;
+// }
+
+@media (max-width: 1199px) {
+    .column-header-name,
+    .column-cell-name,
+    .column-header-token,
+    .column-cell-token {
+        min-width: 300px !important;
+        max-width: 300px !important;
+    }
+}
+.css-1usso8h-MuiDataGrid-root.MuiDataGrid-autoHeight {
+    max-width: 1100px;
+}
+@media (max-width: 1399px) {
+    .css-1usso8h-MuiDataGrid-root.MuiDataGrid-autoHeight {
+        max-width: 850px;
+    }
+}
+@media (max-width: 1220px) {
+    .css-1usso8h-MuiDataGrid-root.MuiDataGrid-autoHeight {
+        max-width: 800px;
+    }
+}
+@media (max-width: 1150px) {
+    .css-1usso8h-MuiDataGrid-root.MuiDataGrid-autoHeight {
+        max-width: 650px;
+    }
+}
+@media (max-width: 991px) {
+    .css-1usso8h-MuiDataGrid-root.MuiDataGrid-autoHeight {
+        max-width: 100%;
+    }
+}
+//////// Mui Table Styling - responsive / alignment / width / end
+// Dark Mode Toggle Btn Styling start
+.dark-mode-toggle {
+    display: flex;
+    justify-content: flex-end;
+    .themeSunBtn {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        svg {
+            cursor: pointer;
+            width: 20px !important;
+            color: #e84d89 !important;
+        }
+    }
+    .themeMoonBtn {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        svg {
+            cursor: pointer;
+            width: 20px !important;
+            margin: 0 !important;
+        }
+    }
+    .themeDiff {
+        margin-left: 0 !important;
+        width: 15px !important;
+    }
+}
+
+.themeBg {
+    background-color: #faf9fa;
+}
+
+// Dark Mode Styling start // start
+.dark-mode {
+    background-color: #242525;
+    min-height: 100vh;
+    width: 100%;
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    ul,
+    li,
+    svg,
+    span,
+    label {
+        color: #c9c8c5 !important;
+        fill: #c9c8c5 !important;
+    }
+    .sidebar {
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(249, 81, 146) !important;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: rgb(249, 81, 146) 0px 0px 2px inset;
+        }
+
+        ::-webkit-scrollbar-track-piece {
+            background-color: #242525 !important;
+            border: 0.5px solid #f95192;
+            border-top: none;
+            border-bottom: none;
+        }
+    }
+    textarea::placeholder,
+    ::placeholder {
+        color: rgba(198, 193, 185, 0.3) !important;
+    }
+    button {
+        background-color: #3b0619;
+        color: #e84d89;
+    }
+    .disableBtn {
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        color: hsla(0, 0%, 100%, 0.6) !important;
+        border: none !important;
+    }
+    .headerBtn {
+        background-color: #1e2122;
+        color: #c9c8c5 !important;
+        &:hover {
+            background-color: #1e2122;
+        }
+    }
+    .wallet-adapter-modal-wrapper {
+        background-color: #1e2122 !important;
+        .wallet-adapter-modal-title {
+            color: #c9c8c5 !important;
+        }
+        .wallet-adapter-modal-list-more {
+            background: #242525 !important;
+        }
+        .wallet-adapter-modal-list-more {
+            color: #fff !important;
+            svg {
+                fill: #fff !important;
+            }
+        }
+        .wallet-adapter-button:not([disabled]) {
+            background-color: #242525 !important;
+            color: #c9c8c5 !important;
+        }
+        .wallet-adapter-button:not([disabled]):hover {
+            background-color: #e84d89 !important;
+            color: #fff !important;
+        }
+        .wallet-adapter-modal-button-close {
+            background-color: #242525 !important;
+            svg {
+                fill: #c9c8c5 !important;
+            }
+        }
+    }
+    .wallet-adapter-dropdown-list {
+        background-color: #1e2122 !important;
+        li {
+            color: #c9c8c5 !important;
+            &:hover {
+                background-color: #242525 !important;
+            }
+        }
+    }
+    .css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+        background-color: #242525 !important;
+    }
+    .column-header-token,
+    .column-header-name,
+    .column-header-action {
+        color: #c9c8c5 !important;
+    }
+    .css-1ri54ff-control {
+        color: #c9c8c5 !important;
+    }
+    .css-1dimb5e-singleValue {
+        color: #c9c8c5 !important;
+    }
+    .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+        background-color: #242525 !important;
+    }
+    .themeBg {
+        background-color: #1e2122;
+    }
+    .modalConverterText {
+        color: #f95192 !important;
+    }
+    input,
+    textarea {
+        background-color: #242525;
+        color: #c9c8c5;
+        border-color: #888 !important;
+    }
+    .tokenFileChosen {
+        ::-webkit-file-upload-button {
+            background-color: #f95192 !important;
+            color: #c9c8c5;
+        }
+    }
+    .launchpad-dropdown,
+    .tooltipBox {
+        background-color: #1e2122;
+    }
+    a {
+        &:hover {
+            span {
+                color: #f95192 !important;
+                svg {
+                    color: #f95192 !important;
+                    fill: #f95192 !important;
+                }
+            }
+        }
+        .subOptionSidebar {
+            font-size: 15px;
+            color: #222;
+            font-family: "Segoe_UI";
+            margin: 0;
+            padding-top: 15px;
+            padding: 14px 0 14px 50px;
+            &:hover {
+                color: #f95192 !important;
+            }
+        }
+        .tooltipText {
+            &:hover {
+                color: #f95192 !important;
+            }
+        }
+    }
+    a[class="active"] {
+        .sidebarActiveBg {
+            background-color: #f95192;
+            span {
+                color: #feeaf1 !important;
+                svg {
+                    color: #feeaf1 !important;
+                    fill: #feeaf1 !important;
+                }
+            }
+        }
+        .subOptionSidebar {
+            color: #f95192 !important;
+            &:hover {
+                color: #f95192 !important;
+            }
+        }
+        .tooltipText {
+            color: #feeaf1 !important;
+            &:hover {
+                color: #feeaf1 !important;
+            }
+        }
+    }
+    .customDarkPink {
+        color: #f95192 !important;
+    }
+    .darkModeGrey {
+        color: #888 !important;
+    }
+    .MuiTooltip-tooltip {
+        background-color: black !important;
+        a {
+            color: #f95192 !important;
+            text-decoration: none !important;
+        }
+        .css-kudwh-MuiTooltip-arrow::before {
+            background-color: black !important;
+        }
+    }
+    .themeChanger {
+        background-color: #1e2122 !important;
+    }
+    .themeChangerCollpase {
+        background-color: #1e2122 !important;
+    }
+    .dark-mode-toggle {
+        .themeSunBtn {
+            svg {
+                color: #c9c8c5 !important;
+            }
+        }
+        .themeMoonBtn {
+            svg {
+                color: #e84d89 !important;
+            }
+        }
+    }
+}

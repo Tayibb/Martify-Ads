@@ -1,0 +1,163 @@
+.home {
+    width: 100%;
+    padding: 60px 0;
+    min-height: 100vh;
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        // @media (min-width: 1400px) {
+        //     max-width: 1200px;
+        //     margin: 0 auto;
+        // }
+        // @media (max-width: 1399px) {
+        //     max-width: 1020px;
+        //     margin: 0 auto;
+        // }
+        // @media (max-width: 1199px) {
+        //     max-width: 840px;
+        //     margin: 0 auto;
+        // }
+    }
+    .homeHeadings {
+        font-size: 38px;
+        @media (max-width: 991px) {
+            font-size: 30px;
+        }
+        @media (max-width: 767px) {
+            font-size: 26px;
+        }
+        @media (max-width: 575px) {
+            font-size: 22px;
+        }
+        font-family: "Segoe_UI";
+        font-weight: 600;
+        color: #222;
+        text-align: center;
+        margin-top: 70px;
+        @media (max-width: 991px) {
+            margin-top: 50px;
+        }
+        @media (max-width: 767px) {
+            margin-top: 40px;
+        }
+        @media (max-width: 575px) {
+            margin-top: 30px;
+        }
+    }
+    .customHeadings {
+        font-size: 48px;
+        @media (max-width: 991px) {
+            font-size: 30px;
+        }
+        @media (max-width: 767px) {
+            font-size: 26px;
+        }
+        @media (max-width: 575px) {
+            font-size: 22px;
+        }
+    }
+    p {
+        font-size: 20px;
+        @media (max-width: 991px) {
+            font-size: 18px;
+        }
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
+        font-family: "Segoe_UI";
+        max-width: 70%;
+        font-weight: 400;
+        color: #4a4a4a;
+        text-align: center;
+    }
+    button {
+        border-radius: 16px;
+        width: 140px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 900;
+        font-family: "Segoe_UI";
+        background-color: #fdeaf1;
+        color: #f95997;
+        height: 45px;
+        padding: 0 16px;
+        border: none;
+        &:nth-child(2) {
+            margin-left: 10px;
+        }
+    }
+    .counterCards {
+        // max-width: 220px;
+        padding: 40px 32px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.01), 0 4px 8px rgba(0, 0, 0, 0.01), 0 8px 12px rgba(0, 0, 0, 0.01), 0 12px 16px rgba(0, 0, 0, 0.01);
+        border-radius: 12px;
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            font-family: "Segoe_UI";
+            font-weight: 600;
+        }
+        h3 {
+            font-size: 16px;
+            text-align: center;
+            font-family: "Segoe_UI";
+            padding-top: 10px;
+        }
+    }
+    .toolCards {
+        // max-width: 220px;
+        padding: 40px 32px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.01), 0 4px 8px rgba(0, 0, 0, 0.01), 0 8px 12px rgba(0, 0, 0, 0.01), 0 12px 16px rgba(0, 0, 0, 0.01);
+        border-radius: 12px;
+        img {
+            max-width: 84px;
+            height: auto;
+        }
+        h5 {
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+            font-family: "Segoe_UI";
+            padding: 15px 0;
+        }
+        h6 {
+            font-size: 16px;
+            min-height: 76px;
+            text-align: center;
+            font-family: "Segoe_UI";
+            color: #888;
+        }
+    }
+    .EcosystemCards {
+        // max-width: 220px;
+        padding: 40px 32px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.01), 0 4px 8px rgba(0, 0, 0, 0.01), 0 8px 12px rgba(0, 0, 0, 0.01), 0 12px 16px rgba(0, 0, 0, 0.01);
+        border-radius: 12px;
+        img {
+            max-width: 84px;
+            height: auto;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            font-family: "Segoe_UI";
+            text-align: center;
+            padding: 15px 0;
+        }
+        h3 {
+            font-size: 16px;
+            text-align: center;
+            font-family: "Segoe_UI";
+            color: #888;
+        }
+    }
+}
